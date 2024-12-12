@@ -51,11 +51,11 @@ def create_dataloaders(
     test_sampler = SubsetSequentialSampler(test_idx)
 
     train_loader = DataLoader(
-        dataset_train, batch_size=1, sampler=train_sampler, num_workers=2,
+        dataset_train, batch_size=1, sampler=train_sampler, num_workers=0,
         drop_last=True, pin_memory=True
     )
     test_loader = DataLoader(
-        dataset_test, batch_size=1, sampler=test_sampler, num_workers=2,
+        dataset_test, batch_size=1, sampler=test_sampler, num_workers=0,
         drop_last=False, pin_memory=True
     )
 
